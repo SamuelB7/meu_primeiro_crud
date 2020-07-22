@@ -1,0 +1,31 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<div class="table">
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for employee in employee %}
+
+            <tr>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.tel}}</td>
+                <td><a href="/{{employee.id}}">ver</a></td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.njk'%}
+
+{% block content %}
+
+<!-- usar o form, o metodo post e o action para criar um formulário -->
+<form class="card" method="POST" action="/main">
+    <section class='img' style = "background: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=500&h=500&fit=crop&ixid=eyJhcHBfaWQiOjF9)  center center / cover">
+
+    </section>
+    <section class="data">
+        <h3>Dados do novo funcionário</h3>
+
+        {% include 'fields.njk'%}
+
+        <a href="/list">Lista de funcionários</a>
+        
+    </section>
+</form>
+{% endblock %}
